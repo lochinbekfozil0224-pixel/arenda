@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0a0e1f">
+<title>PRUM STAR — Orzon Stars, Premium, NFT</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cG9seWdvbiBwb2ludHM9IjUwLDUgNjEsMzkgOTUsMzkgNjgsNTkgNzksOTUgNTAsNzMgMjEsOTUgMzIsNTkgNSwzOSAzOSwzOSIgZmlsbD0iI2ZmZDcwMCIvPjwvc3ZnPg==">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@tonconnect/ui@2.0.5/dist/tonconnect-ui.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- App container -->
+<div id="app">
+
+  <!-- ====== HOME PAGE ====== -->
+  <section class="page page-home active" data-page="home">
+    <header class="topbar">
+      <div class="topbar-user" id="userBadge">
+        <div class="avatar" id="userAvatar">P</div>
+        <div class="user-info">
+          <div class="user-name" id="userName">Mehmon</div>
+          <div class="user-balance">
+            <span id="userBalance">0</span>
+            <span class="balance-currency">so'm</span>
+          </div>
+        </div>
+      </div>
+      <button class="icon-btn" data-nav="profile" title="Profil">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
+      </button>
+    </header>
+
+    <div class="hero">
+      <div class="hero-title">PRUM <span class="gradient-text">STAR</span></div>
+      <div class="hero-subtitle">Orzon star masgani · Telegram xizmatlari</div>
+      <a href="https://t.me/PRUM_STAR" target="_blank" rel="noopener" class="channel-link">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M9.78 18.65l.28-4.23 7.68-6.92c.34-.31-.07-.46-.52-.19L7.74 13.3 3.64 12c-.88-.25-.89-.86.2-1.3l15.97-6.16c.73-.33 1.43.18 1.15 1.3l-2.72 12.81c-.19.91-.74 1.13-1.5.71L12.6 16.3l-1.99 1.93c-.23.23-.42.42-.83.42z"/></svg>
+        Kanalga obuna bo'lish
+      </a>
+    </div>
+
+    <div class="services-grid">
+      <button class="service-card service-stars" data-nav="stars">
+        <div class="service-icon stars-icon">
+          <svg viewBox="0 0 24 24" fill="#FFD700"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="service-text">
+          <div class="service-title">TG Stars</div>
+          <div class="service-desc">Yulduz sotib olish</div>
+        </div>
+        <div class="service-arrow">→</div>
+      </button>
+
+      <button class="service-card service-premium" data-nav="premium">
+        <div class="service-icon premium-icon">
+          <svg viewBox="0 0 24 24" fill="#a78bfa"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <div class="service-text">
+          <div class="service-title">TG Premium</div>
+          <div class="service-desc">Premium obuna</div>
+        </div>
+        <div class="service-arrow">→</div>
+      </button>
+
+      <button class="service-card service-nft" data-nav="nft">
+        <div class="service-icon nft-icon">🎁</div>
+        <div class="service-text">
+          <div class="service-title">NFT Sovg'alar</div>
+          <div class="service-desc">Sotib olish</div>
+        </div>
+        <div class="service-arrow">→</div>
+      </button>
+
+      <button class="service-card service-arenda" data-nav="arenda">
+        <div class="service-icon arenda-icon">🦊</div>
+        <div class="service-text">
+          <div class="service-title">Gift Ijarasi</div>
+          <div class="service-desc">NFT arenda</div>
+        </div>
+        <div class="service-arrow">→</div>
+      </button>
+    </div>
+
+    <div class="info-strip">
+      <div class="info-strip-item">
+        <span class="info-num" id="statUsers">0</span>
+        <span class="info-lbl">Foydalanuvchi</span>
+      </div>
+      <div class="info-strip-item">
+        <span class="info-num" id="statTransactions">0</span>
+        <span class="info-lbl">Buyurtma</span>
+      </div>
+      <div class="info-strip-item">
+        <span class="info-num">24/7</span>
+        <span class="info-lbl">Yordam</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== STARS PAGE ====== -->
+  <section class="page page-stars" data-page="stars">
+    <header class="topbar-back">
+      <button class="back-btn" data-nav="home">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Назад
+      </button>
+      <div class="topbar-right">
+        <button class="icon-btn-sm" data-nav="profile" title="Profil">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="page-header">
+      <div class="page-icon-wrap stars-bg">
+        <svg viewBox="0 0 24 24" width="42" height="42" fill="#FFD700"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div>
+        <div class="page-title">TG STARS</div>
+        <div class="page-subtitle">⭐</div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <label class="form-label">@USERNAME</label>
+      <div class="input-row">
+        <input type="text" class="form-input" id="starsUsername" placeholder="@username">
+        <button class="check-btn" id="starsCheckBtn">Tekshirish</button>
+      </div>
+    </div>
+
+    <div class="section-label">IXTIYORIY SUMMA</div>
+    <div class="form-card">
+      <label class="form-label">Summani kiriting <span class="star-em">⭐</span></label>
+      <div class="amount-row">
+        <input type="number" class="form-input amount-input" id="starsAmount" placeholder="0" min="50">
+        <span class="star-em-big">⭐</span>
+      </div>
+      <div class="narx-row">
+        <span class="narx-label">NARX</span>
+        <span class="narx-value" id="starsPrice">—</span>
+      </div>
+      <div class="hint">1 ⭐ = <span id="starsRate">215</span> so'm</div>
+      <div class="hint hint-purple" id="starsMaxHint">Maksimal olish mumkin: — ⭐</div>
+      <div class="hint">Minimal summa: 50 ⭐</div>
+    </div>
+
+    <button class="primary-btn primary-btn-bottom" id="starsBuyBtn">Sotib olish</button>
+  </section>
+
+  <!-- ====== PREMIUM PAGE ====== -->
+  <section class="page page-premium" data-page="premium">
+    <header class="topbar-back">
+      <button class="back-btn" data-nav="home">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Назад
+      </button>
+      <div class="topbar-right">
+        <button class="icon-btn-sm" data-nav="profile">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="page-header">
+      <div class="page-icon-wrap premium-bg">
+        <svg viewBox="0 0 24 24" width="42" height="42" fill="#a78bfa"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <div>
+        <div class="page-title">TG PREMIUM</div>
+        <div class="page-subtitle">PREMIUM</div>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <label class="form-label">@USERNAME</label>
+      <div class="input-row">
+        <input type="text" class="form-input" id="premiumUsername" placeholder="@username">
+        <button class="check-btn" id="premiumCheckBtn">Tekshirish</button>
+      </div>
+    </div>
+
+    <div class="section-label">MAHSULOTNI TANLANG</div>
+    <div class="badge-row">
+      <div class="region-badge"><span class="region-dot">🌐</span> Global</div>
+    </div>
+
+    <div class="premium-grid">
+      <button class="premium-option" data-premium="1">
+        <div class="premium-emoji">📅</div>
+        <div class="premium-info">
+          <div class="premium-name">1 Oylik</div>
+          <div class="premium-price" data-price-target>admin orqali</div>
+          <div class="premium-hint">Admin lichkasiga o'tadi</div>
+        </div>
+      </button>
+      <button class="premium-option" data-premium="3">
+        <div class="premium-emoji">📅</div>
+        <div class="premium-info">
+          <div class="premium-name">3 Oylik</div>
+          <div class="premium-price" id="premium3Price">169 000 so'm</div>
+        </div>
+      </button>
+      <button class="premium-option" data-premium="6">
+        <div class="premium-emoji">📅</div>
+        <div class="premium-info">
+          <div class="premium-name">6 Oylik</div>
+          <div class="premium-price" id="premium6Price">225 000 so'm</div>
+        </div>
+      </button>
+      <button class="premium-option" data-premium="12">
+        <div class="premium-emoji">📅</div>
+        <div class="premium-info">
+          <div class="premium-name">12 Oylik</div>
+          <div class="premium-price" id="premium12Price">409 000 so'm</div>
+        </div>
+      </button>
+    </div>
+
+    <button class="primary-btn primary-btn-bottom" id="premiumBuyBtn">Sotib olish</button>
+  </section>
+
+  <!-- ====== NFT PAGE ====== -->
+  <section class="page page-nft" data-page="nft">
+    <header class="topbar-back">
+      <button class="back-btn" data-nav="home">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Назад
+      </button>
+      <div class="topbar-right">
+        <button class="icon-btn-sm" data-nav="profile">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="page-header">
+      <div class="page-icon-wrap nft-bg">🎁</div>
+      <div>
+        <div class="page-title">NFT Sotib olish</div>
+        <div class="page-subtitle">Telegram Gift</div>
+      </div>
+    </div>
+
+    <div class="search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" class="search-input" id="nftSearch" placeholder="Gift qidirish...">
+    </div>
+
+    <div class="form-card">
+      <label class="form-label">Kimga yuborish? <small>(@username)</small></label>
+      <input type="text" class="form-input full-input" id="nftRecipient" placeholder="@username">
+    </div>
+
+    <div class="nft-grid" id="nftGrid">
+      <div class="empty-state">NFTlar yuklanmoqda...</div>
+    </div>
+  </section>
+
+  <!-- ====== ARENDA PAGE ====== -->
+  <section class="page page-arenda" data-page="arenda">
+    <header class="topbar-back">
+      <button class="back-btn" data-nav="home">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Назад
+      </button>
+      <div class="topbar-right">
+        <button class="icon-btn-sm" data-nav="profile">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-7 8-7s8 3 8 7"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="arenda-header">
+      <div class="arenda-title-wrap">
+        <span class="arenda-emoji">🦊</span>
+        <span class="arenda-title">Gift ijarasi</span>
+      </div>
+      <button class="qollanma-btn" id="qollanmaBtn">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Qo'llanma
+      </button>
+    </div>
+
+    <div class="search-box">
+      <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" class="search-input" id="arendaSearch" placeholder="Gift qidirish...">
+    </div>
+
+    <div class="arenda-grid" id="arendaGrid">
+      <div class="empty-state">Arenda giftlari yuklanmoqda...</div>
+    </div>
+
+    <div class="arenda-bottom" id="arendaBottomBar" style="display:none">
+      <button class="arenda-rent-btn" id="arendaRentBtn">
+        <span>Ijaraga olish (<span id="arendaCount">0</span>)</span>
+        <span id="arendaTotal">0 so'm/kun</span>
+      </button>
+    </div>
+
+    <nav class="bottom-nav">
+      <button class="nav-tab active" data-nav="home">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+        Bosh sahifa
+      </button>
+      <button class="nav-tab active-tab" id="arendaTab1">
+        Mavjud giftlar
+      </button>
+      <button class="nav-tab" id="myRentalsBtn">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 1 1-9-9c2.5 0 4.8 1 6.5 2.5L21 3"/><polyline points="21 3 21 9 15 9"/></svg>
+        Mening ijaralarim
+      </button>
+    </nav>
+  </section>
+
+  <!-- ====== PROFILE PAGE ====== -->
+  <section class="page page-profile" data-page="profile">
+    <header class="topbar-back">
+      <button class="back-btn" data-nav="home">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Назад
+      </button>
+      <div class="topbar-right">
+        <button class="icon-btn-sm" id="adminPanelLink" title="Admin panel">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33h0a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09a1.65 1.65 0 001 1.51h0a1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82v0a1.65 1.65 0 001.51 1H21a2 2 0 110 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <div class="profile-hero">
+      <div class="profile-avatar" id="profileAvatar">P</div>
+      <div class="profile-name" id="profileName">Foydalanuvchi</div>
+      <div class="profile-id">ID: <span id="profileId">—</span></div>
+    </div>
+
+    <div class="balance-card">
+      <div class="balance-label">Sizning balansingiz</div>
+      <div class="balance-amount">
+        <span id="profileBalance">0</span>
+        <span class="balance-curr">so'm</span>
+      </div>
+      <button class="balance-topup-btn" id="topupBtn">+ Balansni to'ldirish</button>
+    </div>
+
+    <div class="profile-tabs">
+      <button class="profile-tab active" data-tab="history">Tarixim</button>
+      <button class="profile-tab" data-tab="referral">Referal</button>
+    </div>
+
+    <div class="tab-content" id="historyContent">
+      <div class="history-list" id="historyList">
+        <div class="empty-state">Hozircha buyurtmalar yo'q</div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="referralContent" style="display:none">
+      <div class="referral-card">
+        <div class="ref-title">Sizning referal havolangiz</div>
+        <div class="ref-link" id="refLink">https://...</div>
+        <button class="copy-btn" id="copyRefBtn">Nusxalash</button>
+      </div>
+      <div class="referral-card">
+        <div class="ref-stats">
+          <div>
+            <div class="ref-stat-num" id="refCount">0</div>
+            <div class="ref-stat-lbl">Taklif qilinganlar</div>
+          </div>
+          <div>
+            <div class="ref-stat-num" id="refEarned">0 ⭐</div>
+            <div class="ref-stat-lbl">Topilgan bonus</div>
+          </div>
+        </div>
+      </div>
+      <div class="referral-info">
+        <div class="ref-info-title">Bonus tizimi:</div>
+        <div class="ref-info-row">⭐ Har 100 star sotib olishga <b>1 ⭐</b></div>
+        <div class="ref-info-row">⭐ 10 000 star sotib olishga <b>100 ⭐</b></div>
+        <div class="ref-info-row">📅 3 oylik Premium uchun <b>10 ⭐</b></div>
+        <div class="ref-info-row ref-info-mute">NFT va arenda uchun bonus berilmaydi</div>
+      </div>
+    </div>
+
+    <button class="ghost-btn" id="contactAdminBtn">
+      <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      Adminga yozish
+    </button>
+  </section>
+
+  <!-- ====== ADMIN LOGIN ====== -->
+  <section class="page page-admin-login" data-page="admin-login">
+    <header class="topbar-back">
+      <button class="back-btn" data-nav="profile">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Назад
+      </button>
+    </header>
+    <div class="admin-login-wrap">
+      <div class="admin-lock">🔒</div>
+      <div class="admin-title">Admin panel</div>
+      <input type="password" class="form-input full-input" id="adminPwInput" placeholder="Parolni kiriting">
+      <button class="primary-btn" id="adminLoginBtn">Kirish</button>
+      <div class="admin-error" id="adminError"></div>
+    </div>
+  </section>
+
+  <!-- ====== ADMIN PANEL ====== -->
+  <section class="page page-admin" data-page="admin">
+    <header class="topbar-back">
+      <button class="back-btn" data-nav="profile">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+        Chiqish
+      </button>
+      <div class="admin-badge">ADMIN</div>
+    </header>
+
+    <div class="admin-tabs">
+      <button class="admin-tab active" data-admintab="settings">⚙️ Sozlamalar</button>
+      <button class="admin-tab" data-admintab="users">👥 Foydalanuvchilar</button>
+      <button class="admin-tab" data-admintab="nfts">🎁 NFT</button>
+      <button class="admin-tab" data-admintab="rentals">🦊 Arenda</button>
+      <button class="admin-tab" data-admintab="orders">📋 Buyurtmalar</button>
+    </div>
+
+    <!-- Settings tab -->
+    <div class="admin-content" id="admin-settings">
+      <h3>Umumiy sozlamalar</h3>
+      <label class="form-label">Karta raqami</label>
+      <input type="text" class="form-input full-input" id="setCardNumber" placeholder="0000 0000 0000 0000">
+
+      <label class="form-label">Admin Telegram ID</label>
+      <input type="text" class="form-input full-input" id="setAdminId">
+
+      <label class="form-label">Admin Username (@siz)</label>
+      <input type="text" class="form-input full-input" id="setAdminUsername">
+
+      <label class="form-label">1 ⭐ narxi (so'm)</label>
+      <input type="number" class="form-input full-input" id="setStarPrice">
+
+      <h3>Premium narxlari</h3>
+      <label class="form-label">3 Oylik (so'm)</label>
+      <input type="number" class="form-input full-input" id="setP3">
+      <label class="form-label">6 Oylik (so'm)</label>
+      <input type="number" class="form-input full-input" id="setP6">
+      <label class="form-label">12 Oylik (so'm)</label>
+      <input type="number" class="form-input full-input" id="setP12">
+
+      <h3>Qo'llanma video URLlari (YouTube)</h3>
+      <label class="form-label">Stars qo'llanma URL</label>
+      <input type="url" class="form-input full-input" id="setGuideStars">
+      <label class="form-label">Premium qo'llanma URL</label>
+      <input type="url" class="form-input full-input" id="setGuidePremium">
+      <label class="form-label">NFT qo'llanma URL</label>
+      <input type="url" class="form-input full-input" id="setGuideNft">
+      <label class="form-label">Arenda qo'llanma URL</label>
+      <input type="url" class="form-input full-input" id="setGuideArenda">
+
+      <button class="primary-btn" id="saveSettingsBtn">Saqlash</button>
+    </div>
+
+    <!-- Users tab -->
+    <div class="admin-content" id="admin-users" style="display:none">
+      <h3>Foydalanuvchilar</h3>
+      <div class="search-box">
+        <svg class="search-icon" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" class="search-input" id="userSearchInput" placeholder="Username yoki ID bo'yicha qidirish...">
+      </div>
+      <div class="users-list" id="adminUsersList"></div>
+    </div>
+
+    <!-- NFTs tab -->
+    <div class="admin-content" id="admin-nfts" style="display:none">
+      <h3>NFT sotuv</h3>
+      <button class="primary-btn" id="addNftBtn">+ Yangi NFT qo'shish</button>
+      <div class="admin-list" id="adminNftList"></div>
+    </div>
+
+    <!-- Rentals tab -->
+    <div class="admin-content" id="admin-rentals" style="display:none">
+      <h3>Arenda NFTlari</h3>
+      <button class="primary-btn" id="addRentalBtn">+ Yangi arenda qo'shish</button>
+      <div class="admin-list" id="adminRentalList"></div>
+    </div>
+
+    <!-- Orders tab -->
+    <div class="admin-content" id="admin-orders" style="display:none">
+      <h3>Buyurtmalar tarixi</h3>
+      <div class="admin-list" id="adminOrdersList"></div>
+    </div>
+  </section>
+
+  <!-- ====== TOPUP MODAL ====== -->
+  <div class="modal" id="topupModal">
+    <div class="modal-content">
+      <button class="modal-close" data-close>×</button>
+      <h3>Balansni to'ldirish</h3>
+      <label class="form-label">Summa (so'm)</label>
+      <input type="number" class="form-input full-input" id="topupAmount" placeholder="10000" min="1000">
+      <div class="topup-step" id="topupStep1">
+        <button class="primary-btn" id="topupNextBtn">Davom etish</button>
+      </div>
+      <div class="topup-step" id="topupStep2" style="display:none">
+        <div class="topup-card-info">
+          <div class="topup-label">Quyidagi karta raqamiga to'lov qiling:</div>
+          <div class="topup-card-number" id="topupCardNum">0000 0000 0000 0000</div>
+          <button class="copy-btn" id="copyCardBtn">📋 Nusxalash</button>
+        </div>
+        <div class="topup-amount-row">
+          <span>Summa:</span>
+          <b><span id="topupAmountShow">0</span> so'm</b>
+        </div>
+        <div class="topup-instruction">
+          To'lov qilgandan keyin chekni botga yuboring. Admin tasdiqlagandan so'ng balans qo'shiladi.
+        </div>
+        <a href="#" id="botSendLink" target="_blank" class="primary-btn">📤 Botga yuborish</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== GUIDE MODAL (YouTube) ====== -->
+  <div class="modal" id="guideModal">
+    <div class="modal-content modal-content-video">
+      <button class="modal-close" data-close>×</button>
+      <h3 id="guideTitle">Qo'llanma</h3>
+      <div class="video-wrap">
+        <iframe id="guideVideo" src="" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== PURCHASE LOADER ====== -->
+  <div class="modal" id="purchaseLoader">
+    <div class="modal-content modal-loader">
+      <div class="loader-spinner"></div>
+      <h3>Buyurtmangiz qabul qilindi!</h3>
+      <p class="loader-text">Admin tasdiqlamoqda...</p>
+      <p class="loader-sub">10 daqiqa ichida buyurtmangiz amalga oshiriladi. Tarixingizda holatini kuzating.</p>
+      <button class="primary-btn" id="loaderCloseBtn">Yopish</button>
+    </div>
+  </div>
+
+  <!-- ====== ARENDA CONFIRM MODAL ====== -->
+  <div class="modal" id="arendaConfirmModal">
+    <div class="modal-content modal-content-arenda">
+      <button class="modal-close" data-close>×</button>
+      <h3>Ijarani tasdiqlash</h3>
+      <button class="guide-banner" id="arendaGuideBanner">
+        <span class="guide-play">▶</span>
+        <div>
+          <div class="guide-banner-title">Qo'llanma</div>
+          <div class="guide-banner-sub">Video yo'riqnomani ko'rish</div>
+        </div>
+        <span class="guide-arrow">›</span>
+      </button>
+
+      <div class="arenda-selected-list" id="arendaSelectedList"></div>
+
+      <label class="form-label">kun</label>
+      <div class="day-counter">
+        <button class="day-btn-minus" id="dayMinusBtn">−</button>
+        <div class="day-count" id="dayCount">3</div>
+        <button class="day-btn-plus" id="dayPlusBtn">+</button>
+      </div>
+      <div class="hint">Minimal 3 kun</div>
+
+      <label class="form-label">TonConnect URL</label>
+      <button class="primary-btn ton-connect-btn" id="tonConnectBtn">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+        TonConnect orqali ulanish
+      </button>
+      <input type="text" class="form-input full-input" id="arendaTonUrl" placeholder="Yoki TonConnect URLni qo'lda kiriting">
+
+      <div class="arenda-total">
+        <b><span id="arendaConfirmTotal">0</span> so'm</b>
+      </div>
+
+      <div class="modal-actions">
+        <button class="secondary-btn" data-close>Bekor qilish</button>
+        <button class="primary-btn" id="arendaConfirmBtn">Ijaraga olish</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== NFT BUY MODAL ====== -->
+  <div class="modal" id="nftBuyModal">
+    <div class="modal-content">
+      <button class="modal-close" data-close>×</button>
+      <div id="nftBuyDetails"></div>
+      <div class="modal-actions">
+        <button class="secondary-btn" data-close>Bekor qilish</button>
+        <button class="primary-btn" id="nftBuyConfirm">Sotib olish</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== TOAST ====== -->
+  <div class="toast" id="toast"></div>
+
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/app.js"></script>
+<script src="js/stars.js"></script>
+<script src="js/premium.js"></script>
+<script src="js/nft.js"></script>
+<script src="js/arenda.js"></script>
+<script src="js/profile.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
